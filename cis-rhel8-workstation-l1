@@ -1,0 +1,13 @@
+- id: CIS-1.1.1
+  title: Disable unused filesystems
+  check: "lsmod | grep cramfs"
+  expected_output: ""
+  remediation: "echo 'install cramfs /bin/true' >> /etc/modprobe.d/CIS.conf"
+  level: 1
+
+- id: CIS-1.1.2
+  title: Disable unused filesystems
+  check: "lsmod | grep cramfs"
+  expected_output: ""
+  remediation: "echo 'install cramfs /bin/true' >> /etc/modprobe.d/CIS.conf"
+  level: 1
