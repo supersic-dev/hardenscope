@@ -1,0 +1,11 @@
+- id: CIS-1.1.1
+  title: Disable unused filesystem - cramfs
+  check: "lsmod | grep cramfs"
+  expected_output: ""
+  remediation: "echo 'install cramfs /bin/true' >> /etc/modprobe.d/CIS.conf"
+
+- id: CIS-1.1.2
+  title: Ensure mounting of squashfs is disabled
+  check: "lsmod | grep squashfs"
+  expected_output: ""
+  remediation: "echo 'install squashfs /bin/true' >> /etc/modprobe.d/CIS.conf"
